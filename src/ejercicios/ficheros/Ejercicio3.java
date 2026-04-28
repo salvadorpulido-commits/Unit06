@@ -7,7 +7,7 @@ import java.util.Locale;
 
 public class Ejercicio3 {
     public static void main(String[] args) {
-        File archivo = new File("Alumnos.txt");
+        File archivo = new File("src/archivos_txt/Alumnos.txt");
         
         double sumaEdades = 0;
         double sumaEstaturas = 0;

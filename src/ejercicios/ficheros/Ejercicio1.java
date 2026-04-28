@@ -10,7 +10,7 @@ public class Ejercicio1 {
     	
         // 1. Apuntamos al archivo dentro del paquete src
     	
-        File archivo = new File("src/ejercicios/ficheros/NumerosReales.txt");
+        File archivo = new File("src/archivos_txt/NumerosReales.txt");
         
         double suma = 0;
         int contador = 0;
