@@ -7,15 +7,13 @@ import java.util.Scanner;
 
 public class Ejercicio4 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        
-        // Usamos tu nueva ruta organizada
-        
         String ruta = "src/archivos_txt/cadenas.txt";
 
-        // BufferedWriter es eficiente para escribir texto línea a línea
-        
-        try (BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))) {
+        // Al meter AMBOS (Scanner y BufferedWriter) aquí, Java los cierra solos.
+        // Se separan por punto y coma dentro del paréntesis del try.
+        try (Scanner sc = new Scanner(System.in);
+             BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))) {
+            
             String cadena;
             System.out.println("Escribe frases para guardar (escribe 'fin' para terminar):");
 
@@ -24,16 +22,15 @@ public class Ejercicio4 {
                 cadena = sc.nextLine();
 
                 if (!cadena.equalsIgnoreCase("fin")) {
-                	
-                    bw.write(cadena); // Escribe la frase
-                    bw.newLine();    // Añade el salto de línea [cite: 20]
+                    bw.write(cadena);
+                    bw.newLine();
                 }
             } while (!cadena.equalsIgnoreCase("fin"));
 
-            System.out.println("Fichero guardado con éxito en: " + ruta);
+            System.out.println("Proceso finalizado. El fichero se ha guardado en: " + ruta);
 
         } catch (IOException e) {
-            System.out.println("Error al escribir en el fichero: " + e.getMessage());
+            System.out.println("Error de entrada/salida: " + e.getMessage());
         }
     }
 }
