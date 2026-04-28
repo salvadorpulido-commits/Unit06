@@ -1,0 +1,13 @@
+Felipe 20 1.75
+maria 19 1.65
+ana 18 1.60
+Sofia 17 1.68
+William 16 1.82
+Daniel 15 1.70
+Oscar 14 1.78
+Gabriel 13 1.72
+Valentina 12 1.66
+Ximena 11 1.69
+Zoe 10 1.63
+Quinn 9 1.80
+Liam 8 1.74
